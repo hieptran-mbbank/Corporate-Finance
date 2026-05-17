@@ -1,1 +1,0 @@
-This folder stores all AI prompt logs for financial analysis.
