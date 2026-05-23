@@ -1,17 +1,21 @@
 ---
-title: "Stage 2: Company Selection Memo"
+template: "memo-template"
+stage: "Stage 2"
 author: "Hiep Tran"
-date: "2026-05-17"
-output: github_document
-course: "BUS-629 VEMBA"
-assignment: "Stage 2 - Company Selection"
+date: "2026-05-23"
+company: "Vietnam Dairy Products Joint Stock Company (Vinamilk)"
+ticker: "VNM"
+exchange: "HOSE"
+to: "Prof. Adam Stauffer"
+from: "Hiep Tran (VEMBA 2026)"
+subject: "Stage 2: Company Selection Memo - Vinamilk (VNM)"
 ---
 
 # EXECUTIVE MEMORANDUM
 
 **TO:** Prof. Adam Stauffer  
 **FROM:** Hiep Tran (VEMBA 2026)  
-**DATE:** May 17, 2026  
+**DATE:** May 23, 2026  
 **SUBJECT:** Corporate Selection for Comprehensive Financial Ratio Analysis – Vinamilk (VNM)
 
 ## 1. Company Overview
