@@ -484,8 +484,24 @@ input cost inflation is partially passable to the trade channel rather than
 fully absorbed at the manufacturing margin level.
 
 ---
+## 5. LLM Evaluation & Annotations
 
-## 5. Executive Justification
+In accordance with the course criteria, this section evaluates the structural and computational performance of the execution LLM against the architectural constraints set in the Stage 4 Technical Specification.
+
+### 5.1 Technical Execution & Architectural Compliance
+The execution LLM demonstrated a strong capability in mapping the structural layout of all six core ratio categories and processing financial logic. It successfully handled the complex accounting interactions within the DuPont four-factor decomposition framework without structural breakdown. The broad directional trends regarding Vinamilk's gross margin pressures and high-level profitability metrics were maintained with professional contextual fidelity.
+
+### 5.2 Identified Deviations and Accounting Hallucinations
+A deep-dive human audit revealed two material computational errors where the LLM oversimplified boundary conditions by reverting to generalized training shortcuts rather than strict spec instructions:
+1. **Working Capital Day Count Convention (DSO Analysis):** The LLM utilized a standard 360-day commercial calendar benchmark, computing a Days Sales Outstanding (DSO) of 34.10 days. This directly violated the explicit Stage 4 spec constraint requiring a statutory 365-day tracking cycle, which yields the true audited metric of 34.57 days.
+2. **Inventory Turnover Denominator Logic:** The LLM committed a major accounting shortcut by using the current-year ending inventory balance (VND 6,839.28 billion) as the standalone denominator, understating inventory velocity at 5.19x. It bypassed the two-year balance averaging constraint (`startYear_inventory` baseline of VND 5,686.84 billion), which established the correct financial baseline at 6.24x.
+
+### 5.3 Root-Cause Analysis: Spec Gap vs. LLM Limitation
+* **The DSO Deviation (LLM Limitation):** This error is classified as an LLM shortcut bias. The Stage 4 specification clearly dictated the math, but the LLM overrode the instruction due to heavy internal weights favoring the standard 360-day commercial interest convention.
+* **The Inventory Turnover Variance (Spec Gap):** This error traces back to a structural ambiguity in Part A.6 of the Stage 4 specification. While the formula notation was correct, the specification lacked an explicit negative constraint forbidding the substitution of historical beginning stocks with current ending stocks, allowing the AI to take an opportunistic computational shortcut.
+
+---
+## 6. Executive Justification
 
 ### The Investment and Strategic Thesis
 
